@@ -1,0 +1,106 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Nov  3 14:58:20 2026
+# Process ID: 17288
+# Current directory: C:/Users/Pfcz/Downloads/云親FPGA/aux_pzt_pi2d_fpga/vivado_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26084 C:\Users\Pfcz\Downloads\云親FPGA\aux_pzt_pi2d_fpga\vivado_project\aux_pzt_pi2d_lock.xpr
+# Log file: C:/Users/Pfcz/Downloads/云親FPGA/aux_pzt_pi2d_fpga/vivado_project/vivado.log
+# Journal file: C:/Users/Pfcz/Downloads/云親FPGA/aux_pzt_pi2d_fpga/vivado_project\vivado.jou
+# Running On        :LAPTOP-22MJKUDC
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26200
+# Processor Detail  :Intel(R) Core(TM) i9-14900HX
+# CPU Frequency     :2419 MHz
+# CPU Physical cores:24
+# CPU Logical cores :32
+# Host memory       :34070 MB
+# Swap memory       :2147 MB
+# Total Virtual     :36217 MB
+# Available Virtual :16596 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at E:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at E:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at E:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at E:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at E:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at E:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at E:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at E:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at E:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_project C:/Users/Pfcz/Downloads/云親FPGA/aux_pzt_pi2d_fpga/vivado_project/aux_pzt_pi2d_lock.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/lenovo/AppData/Local/Temp/aux_pzt_20261103_140443/vivado_project' since last save.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/Pfcz/Downloads/云親FPGA/aux_pzt_pi2d_fpga/vivado_project/aux_pzt_pi2d_lock.ip_user_files'.
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name UseInlineHdlIP
+ERROR: [Project 1-4421] No val for DA Elab Attr 'CosimPdi'
+ERROR: [Project 1-4421] No val for DA Elab Attr 'CosimPlatform'
+ERROR: [Project 1-4421] No val for DA Elab Attr 'CosimElf'
+ERROR: [Project 1-4421] No val for DA Elab Attr 'CosimRootfs'
+ERROR: [Project 1-4421] No val for DA Elab Attr 'CosimSDfile'
+ERROR: [Project 1-4421] No val for DA Elab Attr 'CosimSDDir'
+ERROR: [Project 1-4421] No val for DA Elab Attr 'CosimOutDir'
+ERROR: [Project 1-4421] No val for DA Elab Attr 'CosimXsa'
+ERROR: [Project 1-4421] No val for DA Elab Attr 'CosimAIKernel'
+ERROR: [Project 1-4421] No val for DA Elab Attr 'LogicalNoCTop'
+ERROR: [Project 1-4421] No val for DA Elab Attr 'LogicalNoCTopLib'
+ERROR: [Project 1-4421] No val for DA Elab Attr 'Dmv'
+Scanning sources...
+Finished scanning sources
+CRITICAL WARNING: [Project 1-192] Failed to load run synth_1. Strategy Vivado Synthesis Defaults (Vivado Synthesis 2025) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run clk_wiz_1_synth_1. Strategy Vivado Synthesis Defaults (Vivado Synthesis 2025) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run vio_aux_controls_synth_1. Strategy Vivado Synthesis Defaults (Vivado Synthesis 2025) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run ila_aux_debug_synth_1. Strategy Vivado Synthesis Defaults (Vivado Synthesis 2025) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run impl_1. Strategy Vivado Implementation Defaults (Vivado Implementation 2025) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run clk_wiz_1_impl_1. Strategy Vivado Implementation Defaults (Vivado Implementation 2025) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run vio_aux_controls_impl_1. Strategy Vivado Implementation Defaults (Vivado Implementation 2025) not recognized by Vivado. 
+
+CRITICAL WARNING: [Project 1-192] Failed to load run ila_aux_debug_impl_1. Strategy Vivado Implementation Defaults (Vivado Implementation 2025) not recognized by Vivado. 
+
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2024.1/data/ip'.
+ERROR: [IP_Flow 19-8166] Failed to verify json document against the schema 'xilinx.com:schema:json_instance:1.0'.
+{
+  "additionalProperties": {
+    "disallowed": "checksum",
+    "instanceRef": "#",
+    "schemaRef": "file:///json_instance_v1_0.json#"
+  }
+}
+CRITICAL WARNING: [IP_Flow 19-183] Failed to load IP instance 'clk_wiz_1'.
+CRITICAL WARNING: [IP_Flow 19-1835] Failed to recreate IP instance 'clk_wiz_1'. Error reading project file(s).
+ERROR: [IP_Flow 19-8166] Failed to verify json document against the schema 'xilinx.com:schema:json_instance:1.0'.
+{
+  "additionalProperties": {
+    "disallowed": "checksum",
+    "instanceRef": "#",
+    "schemaRef": "file:///json_instance_v1_0.json#"
+  }
+}
+CRITICAL WARNING: [IP_Flow 19-183] Failed to load IP instance 'vio_aux_controls'.
+CRITICAL WARNING: [IP_Flow 19-1835] Failed to recreate IP instance 'vio_aux_controls'. Error reading project file(s).
+ERROR: [IP_Flow 19-8166] Failed to verify json document against the schema 'xilinx.com:schema:json_instance:1.0'.
+{
+  "additionalProperties": {
+    "disallowed": "checksum",
+    "instanceRef": "#",
+    "schemaRef": "file:///json_instance_v1_0.json#"
+  }
+}
+CRITICAL WARNING: [IP_Flow 19-183] Failed to load IP instance 'ila_aux_debug'.
+CRITICAL WARNING: [IP_Flow 19-1835] Failed to recreate IP instance 'ila_aux_debug'. Error reading project file(s).
+WARNING: [Project 1-231] Project 'aux_pzt_pi2d_lock.xpr' was created with a future version and may or may not perform reliably with this version of Vivado. It has been opened in read-only mode for the protection of unrecognized data. Use 'File | Save Project As...' if you wish to alter a copy of the project.
+ERROR: [Common 17-39] 'open_project' failed due to earlier errors.
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  3 15:01:24 2026...
