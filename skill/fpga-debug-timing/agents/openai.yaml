@@ -1,4 +1,0 @@
-interface:
-  display_name: "ILA 映射与实现报告检查"
-  short_description: "核对ILA探针与捕获时间窗，检查Vivado报告的约束和时序问题"
-  default_prompt: "使用 $fpga-debug-timing，核对我的顶层与 ILA XCI，并检查 routed timing、utilization 和 DRC；只读取，不修改约束。"

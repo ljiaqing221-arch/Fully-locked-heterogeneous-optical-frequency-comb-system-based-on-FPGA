@@ -1,5 +1,0 @@
-interface:
-  display_name: "FPGA PI²D / PID 锁定"
-  short_description: "生成并验证PI²D锁定控制器、搜索捕获、双积分抗饱和与失样保护"
-  default_prompt: "使用 $fpga-pid-lock，根据最新辅助PZT代码生成或修改PI²D锁定控制器，并验证限幅、抗饱和、失样保持和锁定判据。"
-

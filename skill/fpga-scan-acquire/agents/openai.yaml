@@ -1,4 +1,0 @@
-interface:
-  display_name: "三角扫描与多轮捕获"
-  short_description: "生成参数化三角扫描与多轮捕获逻辑，核对步域检测和准入判据"
-  default_prompt: "使用 $fpga-scan-acquire，生成 12 位、范围 300～3200、步长 37 的三角扫描；每步 100 周期，两轮合格才发捕获脉冲。"
