@@ -25,9 +25,9 @@ VIO → 使能、目标码、手动码、极性、搜索请求及外部状态确
 | `sim/` | 控制器、精确递推和 LO 测试平台 |
 | `build/scripts/` | 建工程、综合和实现入口 |
 | `build/reports/` | 综合、实现、仿真和软件验证记录 |
-| `board/vivado_project/` | Vivado 工程及生成文件 |
-| `board/bitstream/` | 配套 BIT 与 LTX |
-| `board/host/` | JTAG 采集桥接与 CSV 解析程序 |
+| `vivado_project/` | Vivado 工程及生成文件 |
+| `bitstream/` | 配套 BIT 与 LTX |
+| `host/` | JTAG 采集桥接与 CSV 解析程序 |
 | `skill/` | 七项可复用技能、模板、回归与经验依据 |
 | `report/` | 设计报告 |
 
@@ -39,7 +39,7 @@ VIO → 使能、目标码、手动码、极性、搜索请求及外部状态确
 vivado -mode batch -source build/scripts/create_project.tcl
 ```
 
-脚本创建 `board/vivado_project/aux_pzt_pi2d_lock.xpr`，生成 Clocking Wizard、VIO 和 ILA，并加入设计、约束与测试平台。创建工程会重建该位置的工程；需要保留当前交互修改时，先另存工程。
+脚本创建 `vivado_project/aux_pzt_pi2d_lock.xpr`，生成 Clocking Wizard、VIO 和 ILA，并加入设计、约束与测试平台。创建工程会重建该位置的工程；需要保留当前交互修改时，先另存工程。
 
 从源码完成综合、实现及比特流导出：
 
@@ -47,14 +47,14 @@ vivado -mode batch -source build/scripts/create_project.tcl
 vivado -mode batch -source build/scripts/create_project.tcl -tclargs -implement
 ```
 
-综合与实现报告写入 `build/reports/`，BIT 和 LTX 写入 `board/bitstream/`。仅做综合时使用 `-tclargs -synth`。对现有工程重新实现可运行 `build/scripts/build_bitstream.tcl`。
+综合与实现报告写入 `build/reports/`，BIT 和 LTX 写入 `bitstream/`。仅做综合时使用 `-tclargs -synth`。对现有工程重新实现可运行 `build/scripts/build_bitstream.tcl`。
 
 在 Vivado 中打开工程后，于 Simulation Sources 将 `tb_aux_pzt_lock`、`tb_pi2d`、`tb_fixed_lo` 依次设为仿真顶层，分别运行行为仿真至结束，检查各自通过输出及错误信息。原始运行记录为 `build/reports/simulation.log`、`pi2d_simulation.log`、`pi2d_plant_simulation.log` 和 `lo_simulation.log`；技能包提供独立于厂商 IP 的 ModelSim 回归入口。
 
 在项目根目录运行软件检查：
 
 ```powershell
-python -m unittest discover -s board/host -p "test_*.py" -v
+python -m unittest discover -s host -p "test_*.py" -v
 python skill/tools/verify_bundle.py --build-dir build/skill_check --software-only
 ```
 
@@ -62,18 +62,18 @@ python skill/tools/verify_bundle.py --build-dir build/skill_check --software-onl
 
 ## 上板与遥测
 
-核对板卡连接、ADC 接口时序、U20/V20 引出位置、Bank 电压、LO 驱动和 DAC 到 PZT 的增益及偏置，确定执行器允许的码值范围后，在 Hardware Manager 下载 `board/bitstream/aux_pzt_pi2d_lock.bit` 并关联同目录 LTX。VIO 初始闭环使能为关闭状态；先检查手动输出和反馈极性，再设置目标码、外部状态确认与闭环使能。
+核对板卡连接、ADC 接口时序、U20/V20 引出位置、Bank 电压、LO 驱动和 DAC 到 PZT 的增益及偏置，确定执行器允许的码值范围后，在 Hardware Manager 下载 `bitstream/aux_pzt_pi2d_lock.bit` 并关联同目录 LTX。VIO 初始闭环使能为关闭状态；先检查手动输出和反馈极性，再设置目标码、外部状态确认与闭环使能。
 
 连接目标 FPGA 后，在 Vivado Tcl Console 执行以下命令；将路径替换为本项目实际位置：
 
 ```tcl
-source {C:/path/to/aux_pzt_pi2d_fpga/board/host/capture_vivado.tcl}
+source {C:/path/to/project/host/capture_vivado.tcl}
 ```
 
-采集脚本约每 2 s 更新 `board/host/live/latest.csv`。在项目根目录读取最新快照：
+采集脚本约每 2 s 更新 `host/live/latest.csv`。在项目根目录读取最新快照：
 
 ```powershell
-python board/host/read_telemetry.py --once
+python host/read_telemetry.py --once
 ```
 
 持续读取时去掉 `--once`。解析器输出目标码、反馈码、误差、PZT 码、状态、积分项、序号及 FPGA 时间等字段；`stale` 表示相邻读取的快照序号相同。停止 Vivado 采集使用 `set ::aux_telemetry_stop 1`。

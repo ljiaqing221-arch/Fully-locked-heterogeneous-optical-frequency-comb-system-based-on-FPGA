@@ -1,0 +1,15 @@
+{
+  "tests": [
+    {
+      "name": "original",
+      "top": "tb_pid_lock_controller",
+      "sources": [
+        "original/adc_median_filter16.v",
+        "original/wave_detector16.v",
+        "original/pid_lock_controller.v",
+        "original/tb_pid_lock_controller.sv"
+      ],
+      "pass_marker": "PASS sweeps="
+    }
+  ]
+}

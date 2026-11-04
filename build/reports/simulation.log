@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Nov  3 14:08:04 2026
+# Process ID         : 29064
+# Current directory  : C:/Users/lenovo/Desktop/本科FPGA/2026异构共锁光频梳材料/2026.11.3/图文公式与PI2D完善版/aux_pzt_pi2d_fpga/sim_build
+# Command line       : xsim.exe -log ../reports/simulation.log -mode tcl -source {xsim.dir/aux_pzt_sim/xsim_script.tcl}
+# Log file           : C:/Users/lenovo/Desktop/本科FPGA/2026异构共锁光频梳材料/2026.11.3/图文公式与PI2D完善版/aux_pzt_pi2d_fpga/sim_build/../reports/simulation.log
+# Journal file       : C:/Users/lenovo/Desktop/本科FPGA/2026异构共锁光频梳材料/2026.11.3/图文公式与PI2D完善版/aux_pzt_pi2d_fpga/sim_build\xsim.jou
+# Running On         : 77evenPC
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13900HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16907 MB
+# Swap memory        : 11811 MB
+# Total Virtual      : 28718 MB
+# Available Virtual  : 8036 MB
+#-----------------------------------------------------------
+source xsim.dir/aux_pzt_sim/xsim_script.tcl
+# xsim {aux_pzt_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS ADC encoding and overrange rejection
+PASS DAC falling-edge 24-bit SPI frames
+PASS PZT interface calibration gate in manual and closed loop
+PASS thermal-lag plant disturbance rejection
+PASS auxiliary valid freeze and recovery
+PASS positive slope and nonzero setpoint
+PASS target change with controlled transfer
+PASS beat invalid freeze and recovery
+PASS ADC quality and stale-sample watchdog
+PASS negative slope
+PASS bounded search and capture
+PASS search exhaustion stops without false lock
+PASS manual code mode
+ALL TESTS PASSED
+$finish called at time : 822460 ns : File "C:/Users/lenovo/Desktop/本科FPGA/2026异构共锁光频梳材料/2026.11.3/图文公式与PI2D完善版/aux_pzt_pi2d_fpga/sim/tb_aux_pzt_lock.sv" Line 78
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Nov  3 14:08:06 2026...
